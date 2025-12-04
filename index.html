@@ -23,6 +23,32 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #64748b; 
       }
+      
+      /* Scanner Animation */
+      @keyframes scan {
+        0% { top: 0%; opacity: 0; }
+        10% { opacity: 1; box-shadow: 0 0 15px rgba(52, 211, 153, 0.8); }
+        90% { opacity: 1; }
+        100% { top: 100%; opacity: 0; }
+      }
+      .animate-scan {
+        animation: scan 2s linear infinite;
+      }
+      
+      /* Leaflet Customizations */
+      .custom-popup .leaflet-popup-content-wrapper {
+        background: #1e293b;
+        color: #f1f5f9;
+        border: 1px solid #334155;
+        border-radius: 0.75rem;
+      }
+      .custom-popup .leaflet-popup-tip {
+        background: #334155;
+        border-top: 1px solid #334155;
+      }
+      .custom-popup .leaflet-popup-close-button {
+        color: #94a3b8 !important;
+      }
     </style>
   <script type="importmap">
 {
@@ -36,7 +62,8 @@
     "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
     "leaflet/": "https://aistudiocdn.com/leaflet@^1.9.4/",
     "leaflet": "https://aistudiocdn.com/leaflet@^1.9.4",
-    "react-leaflet": "https://aistudiocdn.com/react-leaflet@^5.0.0"
+    "react-leaflet": "https://aistudiocdn.com/react-leaflet@^5.0.0",
+    "supercluster": "https://esm.sh/supercluster@8.0.1"
   }
 }
 </script>

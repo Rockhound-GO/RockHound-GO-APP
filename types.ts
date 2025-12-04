@@ -35,6 +35,7 @@ export interface GeoNode {
   type: 'Deposit' | 'Point of Interest' | 'Hazard';
   name: string;
   description: string;
+  mineralId?: string;
 }
 
 export interface ChatMessage {

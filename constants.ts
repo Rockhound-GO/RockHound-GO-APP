@@ -63,8 +63,51 @@ export const MOCK_INVENTORY: Mineral[] = [
   },
 ];
 
+export const MINERAL_DATABASE: Record<string, Mineral> = {
+  'quartz': {
+    id: 'quartz',
+    name: 'Quartz Vein',
+    description: 'Common silica mineral often found in hydrothermal veins.',
+    rarity: RarityTier.Common,
+    hardness: 7,
+    type: 'Mineral',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Quartz_Br%C3%A9sil.jpg/240px-Quartz_Br%C3%A9sil.jpg',
+    dateFound: '',
+  },
+  'amethyst': {
+    id: 'amethyst',
+    name: 'Amethyst Geode',
+    description: 'Purple variety of quartz caused by irradiation.',
+    rarity: RarityTier.Uncommon,
+    hardness: 7,
+    type: 'Mineral',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Amethyst_Quartz.jpg/240px-Amethyst_Quartz.jpg',
+    dateFound: '',
+  },
+  'gold': {
+    id: 'gold',
+    name: 'Gold Placer',
+    description: 'Native metal found in alluvial deposits.',
+    rarity: RarityTier.Legendary,
+    hardness: 2.5,
+    type: 'Mineral',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Gold-nugget-4.jpg/240px-Gold-nugget-4.jpg',
+    dateFound: '',
+  },
+  'malachite': {
+    id: 'malachite',
+    name: 'Malachite',
+    description: 'Green copper carbonate hydroxide.',
+    rarity: RarityTier.Rare,
+    hardness: 3.5,
+    type: 'Mineral',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malachite_-_Katanga%2C_Congo.jpg/240px-Malachite_-_Katanga%2C_Congo.jpg',
+    dateFound: '',
+  },
+};
+
 export const MOCK_NODES: GeoNode[] = [
-  { id: 'n1', lat: 51.505, lng: -0.09, type: 'Deposit', name: 'Alluvial Fan', description: 'River deposits. Good for agates.' },
-  { id: 'n2', lat: 51.51, lng: -0.1, type: 'Point of Interest', name: 'Contact Zone', description: 'Metamorphic potential high.' },
+  { id: 'n1', lat: 51.505, lng: -0.09, type: 'Deposit', name: 'Alluvial Fan', description: 'River deposits. Good for agates.', mineralId: 'quartz' },
+  { id: 'n2', lat: 51.51, lng: -0.1, type: 'Point of Interest', name: 'Contact Zone', description: 'Metamorphic potential high.', mineralId: 'malachite' },
   { id: 'n3', lat: 51.49, lng: -0.08, type: 'Hazard', name: 'Unstable Cliff', description: 'Do not approach edge. Falling rock hazard.' },
 ];
