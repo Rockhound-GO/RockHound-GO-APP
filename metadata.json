@@ -1,0 +1,8 @@
+{
+  "name": "RockHound-GO",
+  "description": "An AI-powered geological field assistant and gamified rockhounding companion.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
